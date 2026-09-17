@@ -1,0 +1,30 @@
+{
+  "name": "pi-more-context-relay",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Policy-aware context relay for coordinating multiple Pi agent sessions.",
+  "type": "module",
+  "engines": {
+    "node": ">=22.19.0"
+  },
+  "scripts": {
+    "check": "node --check src/index.js && node --check src/history-sidecar.js && node --check src/pi-sdk-spike.js && node --check src/pi-context-hook-spike.js && node --check src/group-tree.js && node --check src/task-manager.js && node --check src/record-store.js && node --check src/authorization.js && node --check src/group-fact-store.js && node --check src/fact-snapshot.js && node --check scripts/pi-dual-session-spike.mjs && node --check scripts/pi-context-hook-spike.mjs && node --check scripts/pi-history-sidecar-spike.mjs && node --check scripts/group-fact-store-spike.mjs",
+    "spike:pi:dual:check": "node --check scripts/pi-dual-session-spike.mjs",
+    "spike:pi:dual:online": "node scripts/pi-dual-session-spike.mjs",
+    "spike:pi:context:check": "node --check scripts/pi-context-hook-spike.mjs",
+    "spike:pi:context": "node scripts/pi-context-hook-spike.mjs",
+    "spike:pi:history:check": "node --check scripts/pi-history-sidecar-spike.mjs",
+    "spike:pi:history": "node scripts/pi-history-sidecar-spike.mjs",
+    "spike:group-facts:check": "node --check scripts/group-fact-store-spike.mjs",
+    "spike:group-facts": "node scripts/group-fact-store-spike.mjs",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "@earendil-works/pi-ai": "0.85.1",
+    "@earendil-works/pi-coding-agent": "0.85.1"
+  },
+  "devDependencies": {
+    "vitest": "4.1.11"
+  }
+}

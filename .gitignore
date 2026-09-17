@@ -1,0 +1,17 @@
+node_modules/
+dist/
+coverage/
+.env
+.env.*
+!.env.example
+*.log
+*.sqlite
+*.sqlite3
+*.db
+artifacts/*
+!artifacts/.gitkeep
+benchmarks/results/*
+!benchmarks/results/.gitkeep
+.DS_Store
+Thumbs.db
+
